@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Wishes</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    #birthdayWishes {
+      font-size: 24px;
+      color: #333;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="birthdayWishes"></div>
+
+  <script>
+    const wishes = [
+      "Happy Birthday! (English)",
+      "जन्मदिन मुबारक हो! (Hindi)",
+      "生日快樂！(Chinese)",
+      "Feliz Cumpleaños! (Spanish)",
+      "Buon Compleanno! (Italian)",
+      "Joyeux Anniversaire! (French)",
+      "Alles Gute zum Geburtstag! (German)",
+      "Selamat Ulang Tahun! (Indonesian)",
+      "Tillykke med fødselsdagen! (Danish)",
+      "Gelukkige Verjaardag! (Dutch)",
+      "С Днем Рождения! (Russian)",
+      "Χαρούμενα Γενέθλια! (Greek)",
+      "生日快乐！(Mandarin)",
+      "Buon Compleanno! (Japanese)",
+      "Grattis på födelsedagen! (Swedish)",
+      "Chúc Mừng Sinh Nhật! (Vietnamese)",
+      "생일 축하해요! (Korean)",
+      "יום הולדת שמח! (Hebrew)"
+    ];
+
+    const wishesContainer = document.getElementById('birthdayWishes');
+
+    function displayWishes() {
+      wishesContainer.style.display = 'block';
+
+      wishes.forEach((wish, index) => {
+        setTimeout(() => {
+          wishesContainer.innerHTML = wish + '<br>' + 'May God bless you with all the happiness in this world, Sharanya';
+        }, 3000 * index); // Change the delay (in milliseconds) if needed
+      });
+    }
+
+    // Call the function when the page loads
+    displayWishes();
+  </script>
+</body>
+</html>
